@@ -271,10 +271,13 @@ function get_artifacts_dir() {
 
 	local distro=$os_distro_release
 
-	if [[ "$distro" == "ubuntu-22.04" ]] ||
+	if [[ "$distro" == "ubuntu-24.04" ]] ||
+		[[ "$distro" == "ubuntu-22.04" ]] ||
 		[[ "$distro" == "ubuntu-21.10" ]] ||
 		[[ "$distro" == "ubuntu-20.04" ]] ||
 		[[ "$distro" == "ubuntu-18.04" ]] ||
+		[[ "$distro" == "fedora-41" ]] ||
+		[[ "$distro" == "fedora-40" ]] ||
 		[[ "$distro" =~ "debian" ]]; then
 		artifacts_dir="${sysbox_artifacts}/bin/generic"
 	elif [[ "$distro" =~ "flatcar" ]]; then
@@ -742,10 +745,13 @@ function is_supported_distro() {
 
 	local distro=$os_distro_release
 
-	if [[ "$distro" == "ubuntu-22.04" ]] ||
+	if [[ "$distro" == "ubuntu-24.04" ]] ||
+		[[ "$distro" == "ubuntu-22.04" ]] ||
 		[[ "$distro" == "ubuntu-21.10" ]] ||
 		[[ "$distro" == "ubuntu-20.04" ]] ||
 		[[ "$distro" == "ubuntu-18.04" ]] ||
+		[[ "$distro" == "fedora-41" ]] ||
+		[[ "$distro" == "fedora-40" ]] ||
 		[[ "$distro" =~ "debian" ]] ||
 		[[ "$distro" =~ "flatcar" ]]; then
 		return
